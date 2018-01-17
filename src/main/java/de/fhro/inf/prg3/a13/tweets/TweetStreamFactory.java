@@ -1,5 +1,6 @@
 package de.fhro.inf.prg3.a13.tweets;
 
+import de.fhro.inf.prg3.a13.tweets.generators.OfflineTweetStreamGenerator;
 import de.fhro.inf.prg3.a13.tweets.generators.OnlineTweetStreamGenerator;
 import de.fhro.inf.prg3.a13.tweets.generators.TweetStreamGenerator;
 import org.apache.commons.lang3.NotImplementedException;
@@ -65,7 +66,7 @@ public final class TweetStreamFactory {
             return onlineTweetStreamGenerator;
         }
         /* TODO return offline source generator */
-        throw new NotImplementedException("TweetStreamFactory.getTweetsStream() is not implemented yet");
+        return new OfflineTweetStreamGenerator();
     }
 
     /**
